@@ -31,17 +31,9 @@ myStars.forEach(element => {
         for (let i = 0; myStars[i - 1] != element; i++) {
             myStars[i].classList.add('myStarChoose');
         }
-        console.log(document.querySelectorAll('.myStarChoose').length)
+        const myButton = document.querySelector('.sign_up_button');
+        myButton.value = document.querySelectorAll('.myStarChoose').length;
     });
-    // element.addEventListener('mouseout', (e) => {
-    //     // if (document.querySelectorAll('.myStarChoose')) {
-    //     //     const myConst = document.querySelectorAll('.myStarChoose');
-    //     //     for (let i = myConst.length; i > 0; i--) {
-    //     //         myConst[i - 1].classList.remove('myStarChoose');
-    //     //         console.log(myConst);
-    //     //     }
-    //     // }
-    // })
 });
 
 
