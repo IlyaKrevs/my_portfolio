@@ -31,8 +31,7 @@ myStars.forEach(element => {
         for (let i = 0; myStars[i - 1] != element; i++) {
             myStars[i].classList.add('myStarChoose');
         }
-        const myConst = document.querySelectorAll('.myStarChoose');
-
+        console.log(document.querySelectorAll('.myStarChoose').length)
     });
     // element.addEventListener('mouseout', (e) => {
     //     // if (document.querySelectorAll('.myStarChoose')) {
@@ -44,6 +43,8 @@ myStars.forEach(element => {
     //     // }
     // })
 });
+
+
 
 
 
