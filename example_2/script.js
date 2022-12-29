@@ -19,7 +19,7 @@ myForm.addEventListener('input', (e) => {
 const myBox = document.querySelector('.raiting_box');
 const myStars = document.querySelectorAll('.myStar');
 const myFirstStar = document.querySelector('.myStar');
-console.log(myBox)
+// console.log(myBox)
 
 myStars.forEach(element => {
     element.addEventListener('mouseover', (e) => {
@@ -27,14 +27,23 @@ myStars.forEach(element => {
             myStars[i].classList.add('myStarChoose');
         }
         const myConst = document.querySelectorAll('.myStarChoose');
-        console.log(myConst);
+        // console.log(myConst);
 
     });
-    // element.addEventListener('mouseout', (e) => {
-    //     for (let i = element.lenth + 1; element != myStars[i]; i--) {
-    //         myStars[i].classList.remove('myStarChoose')
-    //     }
-    // })
+    element.addEventListener('mouseout', (e) => {
+        if (document.querySelectorAll('.myStarChoose')) {
+            const myConst = document.querySelectorAll('.myStarChoose');
+            console.log(myConst);
+            for (let i = myConst.length - 1; i > 0; i--) {
+                myConst[i].classList.remove('myStarChoose');
+                console.log(myConst);
+            }
+        }
+
+        // for (let i = element.lenth + 1; element != myStars[i]; i--) {
+        //     myStars[i].classList.remove('myStarChoose')
+        // }
+    })
 });
 
 
