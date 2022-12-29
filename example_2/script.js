@@ -16,9 +16,7 @@ myForm.addEventListener('input', (e) => {
 });
 
 
-const myBox = document.querySelector('.raiting_box');
 const myStars = document.querySelectorAll('.myStar');
-const myFirstStar = document.querySelector('.myStar');
 
 myStars.forEach(element => {
     element.addEventListener('click', (e) => {
