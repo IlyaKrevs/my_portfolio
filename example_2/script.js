@@ -26,7 +26,6 @@ myStars.forEach(element => {
             const myConst = document.querySelectorAll('.myStarChoose');
             for (let i = myConst.length; i > 0; i--) {
                 myConst[i - 1].classList.remove('myStarChoose');
-                console.log(myConst);
             }
         }
         for (let i = 0; myStars[i - 1] != element; i++) {
