@@ -552,9 +552,12 @@
 .myStar {
     height: 15px;
     width: 15px;
+    cursor: pointer;
 }
 
-
+.myStarChoose {
+    fill: yellow;
+}
 
 .sign_up_splitter {
     width: 336px;
@@ -599,9 +602,7 @@
     gap: 40px;
 }
 
-.myStarChoose {
-    fill: yellow;
-}
+
 
 
 @media (max-width: 375px) {

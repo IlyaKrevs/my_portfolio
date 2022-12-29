@@ -15,18 +15,37 @@ myForm.addEventListener('input', (e) => {
     }
 });
 
+
+const myBox = document.querySelector('.raiting_box');
 const myStars = document.querySelectorAll('.myStar');
 const myFirstStar = document.querySelector('.myStar');
+console.log(myBox)
+
+myStars.forEach(element => {
+    element.addEventListener('mouseover', (e) => {
+        for (let i = 0; myStars[i - 1] != element; i++) {
+            myStars[i].classList.add('myStarChoose');
+        }
+        const myConst = document.querySelectorAll('.myStarChoose');
+        console.log(myConst);
+
+    });
+    // element.addEventListener('mouseout', (e) => {
+    //     for (let i = element.lenth + 1; element != myStars[i]; i--) {
+    //         myStars[i].classList.remove('myStarChoose')
+    //     }
+    // })
+});
 
 
-for (let i = 0; i < myStars.length; i++) {
-    myStars[i].addEventListener('mouseover', (e) => {
-        const myTarget = e.target
-    })
-    myStars[i].addEventListener('mouseout', (e) => {
-        myStars[i].classList.remove('myStarChoose');
-    })
-}
+
+
+
+
+
+
+
+
 
 
 
