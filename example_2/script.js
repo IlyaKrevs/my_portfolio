@@ -20,11 +20,9 @@ const myStars = document.querySelectorAll('.myStar');
 
 myStars.forEach(element => {
     element.addEventListener('click', (e) => {
-        if (document.querySelectorAll('.myStarChoose')) {
-            const myConst = document.querySelectorAll('.myStarChoose');
-            for (let i = myConst.length; i > 0; i--) {
-                myConst[i - 1].classList.remove('myStarChoose');
-            }
+        const myConst = document.querySelectorAll('.myStarChoose');
+        for (let i = myConst.length; i > 0; i--) {
+            myConst[i - 1].classList.remove('myStarChoose');
         }
         for (let i = 0; myStars[i - 1] != element; i++) {
             myStars[i].classList.add('myStarChoose');
