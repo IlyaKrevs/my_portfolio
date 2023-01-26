@@ -1,3 +1,47 @@
+const arrowLeft = document.querySelector('.button_left');
+const arrowRight = document.querySelector('.button_right');
+const carouselTrack = document.querySelector('.carousel__track');
+const carouselItem = document.querySelector('.carousel__item');
+
+const mediaQuery = window.matchMedia('(max-width: 425px)')
+
+
+let startPos = 0;
+
+
+arrowLeft.addEventListener('click', (e) => {
+    if (mediaQuery.matches) {
+        if (startPos < 0) {
+            startPos = startPos + 425;
+        }
+    }
+    else {
+        if (startPos < 0) {
+            startPos = startPos + 600;
+        }
+    }
+    carouselTrack.style.marginLeft = startPos + 'px';
+});
+
+arrowRight.addEventListener('click', (e) => {
+    if (mediaQuery.matches) {
+        if (startPos > -850) {
+            startPos = startPos - 425;
+        }
+    }
+    else {
+        if (startPos > -1200) {
+            startPos = startPos - 600;
+        }
+    }
+    carouselTrack.style.marginLeft = startPos + 'px';
+});
+
+
+
+
+
+
 function getTimeRemaining(endtime) {
     var t = Date.parse(endtime) - Date.parse(new Date());
     var seconds = Math.floor((t / 1000) % 60);
