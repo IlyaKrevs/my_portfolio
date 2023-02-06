@@ -2,4 +2,4 @@
 
 Switch branch on 'myBranch' for look more information
 
-Смените ветку на 'myBranch' для просмотра
+Смените ветку 'main' на 'myBranch' для просмотра
